@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://t4v2slvq5umd"]
+
+[ext_resource type="PackedScene" uid="uid://c5eoy6u7byyh1" path="res://scenes/Instaces/MovableWall.tscn" id="2_8yemm"]
+[ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="2_d4syq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="LightSource" parent="." instance=ExtResource("2_d4syq")]
+modulate = Color(1, 0, 0.0705882, 1)
+position = Vector2(512, 128)
+
+[node name="MovableWall" parent="." instance=ExtResource("2_8yemm")]
+position = Vector2(512, 448)
+
+[node name="LightSource2" parent="." instance=ExtResource("2_d4syq")]
+modulate = Color(0.843137, 1, 0, 1)
+position = Vector2(200, 456)
+rotation = -1.5708

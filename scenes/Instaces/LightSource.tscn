@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg3jn5y1hk6sn"]
+
+[ext_resource type="Script" path="res://scripts/LightSource.gd" id="1_huiui"]
+[ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/1x1square.tres" id="1_u7vgn"]
+[ext_resource type="Texture2D" uid="uid://jo8l220wrqsh" path="res://art/LightSource.png" id="2_vo3h5"]
+
+[node name="LightSource" type="Area2D"]
+script = ExtResource("1_huiui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_u7vgn")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 2000)
+collide_with_areas = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vo3h5")
+
+[node name="Line2D" type="Line2D" parent="."]
+show_behind_parent = true

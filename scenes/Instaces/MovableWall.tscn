@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5eoy6u7byyh1"]
+
+[ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/1x1square.tres" id="1_0ytkb"]
+[ext_resource type="Script" path="res://scripts/MovableWall.gd" id="1_fpy6p"]
+[ext_resource type="Texture2D" uid="uid://d2wvnqaxyrymy" path="res://art/Wall.png" id="2_7vw5o"]
+
+[node name="MovableWall" type="Area2D"]
+script = ExtResource("1_fpy6p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_0ytkb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7vw5o")
