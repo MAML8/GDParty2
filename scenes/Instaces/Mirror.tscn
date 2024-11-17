@@ -13,10 +13,18 @@ shape = ExtResource("2_0a6gi")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_vbs2d")
 
-[node name="RayCast1" type="RayCast2D" parent="."]
-target_position = Vector2(0, 0)
+[node name="Right" type="RayCast2D" parent="."]
+target_position = Vector2(2000, 0)
 collide_with_areas = true
 
-[node name="RayCast2" type="RayCast2D" parent="."]
-target_position = Vector2(0, 0)
+[node name="Down" type="RayCast2D" parent="."]
+target_position = Vector2(0, 2000)
+collide_with_areas = true
+
+[node name="Left" type="RayCast2D" parent="."]
+target_position = Vector2(-2000, 0)
+collide_with_areas = true
+
+[node name="Up" type="RayCast2D" parent="."]
+target_position = Vector2(0, -2000)
 collide_with_areas = true
