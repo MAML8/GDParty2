@@ -6,13 +6,12 @@ var line: Line2D;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	raycast = get_child(1) as RayCast2D;
+	raycast = get_child(2) as RayCast2D;
 	line = get_child(3) as Line2D;
 	line.default_color = modulate;
 
 func light_beam() -> void:
-	
-	line.add_point(raycast.target_position.normalized()*50, 0);
+	line.add_point(raycast.position, 0);
 	var ray: RayCast2D = raycast;
 	var oldray: RayCast2D = null;
 	while ray!=oldray:
@@ -28,6 +27,9 @@ func light_beam() -> void:
 			elif hit is LightReceiver:
 				line.add_point(to_local(hit.get_parent().position));
 				hit.receive_light(line.default_color);
+			elif hit is Filter:
+				line.add_point(to_local(hit.position));
+				hit.filter_light(ray.get_parent().position, line.default_color);
 			else:
 				line.add_point(to_local(ray.get_collision_point()));
 		else:

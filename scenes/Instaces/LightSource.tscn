@@ -10,13 +10,14 @@ script = ExtResource("1_huiui")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = ExtResource("1_u7vgn")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vo3h5")
+
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 2000)
 collide_with_areas = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_vo3h5")
-
 [node name="Line2D" type="Line2D" parent="."]
 show_behind_parent = true
 z_index = -1
+joint_mode = 2
