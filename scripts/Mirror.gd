@@ -1,4 +1,5 @@
 extends Area2D;
+class_name Mirror;
 
 var right: RayCast2D;
 var down: RayCast2D;

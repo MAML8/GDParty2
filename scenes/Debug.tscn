@@ -1,29 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://t4v2slvq5umd"]
+[gd_scene load_steps=6 format=3 uid="uid://t4v2slvq5umd"]
 
 [ext_resource type="PackedScene" uid="uid://c5eoy6u7byyh1" path="res://scenes/Instaces/MovableWall.tscn" id="2_8yemm"]
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="2_d4syq"]
+[ext_resource type="PackedScene" uid="uid://dgv258bo2gwvj" path="res://scenes/Instaces/LightSumer.tscn" id="3_7iwjh"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="3_vgktr"]
+[ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="5_k1hka"]
 
 [node name="Node2D" type="Camera2D"]
 
 [node name="LightSource3" parent="." instance=ExtResource("2_d4syq")]
-position = Vector2(-192, -448)
+modulate = Color(1, 0, 0, 1)
+position = Vector2(0, -384)
 
 [node name="MovableWall" parent="." instance=ExtResource("2_8yemm")]
-position = Vector2(576, -256)
+position = Vector2(0, -192)
 
-[node name="Mirror" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(-192, 64)
+[node name="LightSource" parent="." instance=ExtResource("3_7iwjh")]
 
 [node name="LightSource2" parent="." instance=ExtResource("2_d4syq")]
-position = Vector2(-576, -256)
-rotation = -1.5708
+modulate = Color(0, 1, 0, 1)
+position = Vector2(-512, 384)
+rotation = 3.14159
+
+[node name="Mirror" parent="." instance=ExtResource("3_vgktr")]
+position = Vector2(-512, 0)
+
+[node name="LightSource4" parent="." instance=ExtResource("2_d4syq")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(512, -256)
+rotation = 1.5708
 
 [node name="Mirror2" parent="." instance=ExtResource("3_vgktr")]
 position = Vector2(256, -256)
 
 [node name="Mirror3" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(-192, -256)
+position = Vector2(256, 0)
 
-[node name="Mirror4" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(256, 64)
+[node name="LightReceiver" parent="." instance=ExtResource("5_k1hka")]
+position = Vector2(0, 256)
+rotation = 3.14159
