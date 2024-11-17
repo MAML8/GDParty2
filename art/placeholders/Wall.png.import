@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jo8l220wrqsh"
-path="res://.godot/imported/LightSource.png-690454bf141dd1c55a0136735dbc405b.ctex"
+uid="uid://d2wvnqaxyrymy"
+path="res://.godot/imported/Wall.png-957810979aa71e9561a0993695f87dbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/LightSource.png"
-dest_files=["res://.godot/imported/LightSource.png-690454bf141dd1c55a0136735dbc405b.ctex"]
+source_file="res://art/placeholders/Wall.png"
+dest_files=["res://.godot/imported/Wall.png-957810979aa71e9561a0993695f87dbd.ctex"]
 
 [params]
 
