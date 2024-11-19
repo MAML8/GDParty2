@@ -1,7 +1,7 @@
 extends LightSource;
 class_name LightSumer;
 
-var colorList := [];
+var colorList: Array[Color];
 
 func receiver_color(c: Color) -> void:
 	colorList.append(c);

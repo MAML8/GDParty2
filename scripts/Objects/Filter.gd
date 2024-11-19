@@ -5,7 +5,7 @@ var right: RayCast2D;
 var down: RayCast2D;
 var left: RayCast2D;
 var up: RayCast2D;
-var filteringColor: Color;
+@export var filteringColor := Color.RED;
 var isReceiveing := false;
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,7 @@ func _ready() -> void:
 	left = get_child(4) as RayCast2D;
 	up = get_child(5) as RayCast2D;
 	line = get_child(6) as Line2D;
-	filteringColor = Color(1-modulate.r, 1-modulate.g, 1-modulate.b);
+	filteringColor = Color(1-filteringColor.r, 1-filteringColor.g, 1-filteringColor.b);
 	
 
 func subtract_color(a: Color, b: Color) -> Color:
@@ -39,7 +39,6 @@ func get_ray(dir: Vector2) -> RayCast2D:
 	return null;
 
 func filter_light(from: Vector2, color: Color) -> void:
-	print("receiving");
 	raycast = get_ray(-to_local(from).normalized());
 	line.default_color = subtract_color(color, filteringColor);
 	isReceiveing = true;

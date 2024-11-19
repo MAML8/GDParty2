@@ -1,12 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dp3s62c8lvka3"]
+[gd_scene load_steps=5 format=3 uid="uid://dp3s62c8lvka3"]
 
 [ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/help resources/1x1square.tres" id="1_7y5ma"]
-[ext_resource type="Script" path="res://scripts/LightReceiver.gd" id="1_ebt1n"]
+[ext_resource type="Script" path="res://scripts/Objects/LightReceiver.gd" id="1_ebt1n"]
 [ext_resource type="Texture2D" uid="uid://b1a4y4bxlfnim" path="res://art/placeholders/LightReceiver.png" id="2_tbanl"]
 [ext_resource type="Texture2D" uid="uid://blae5m6u8v6kw" path="res://art/placeholders/LightReceiverColorWant.png" id="3_jddb8"]
-[ext_resource type="Shape2D" uid="uid://bulqsprwokc0a" path="res://art/help resources/detectReceiveing.tres" id="5_d53ox"]
 
 [node name="LightReceiver" type="Area2D"]
+script = ExtResource("1_ebt1n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = ExtResource("1_7y5ma")
@@ -14,12 +14,5 @@ shape = ExtResource("1_7y5ma")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_tbanl")
 
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("1_ebt1n")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 32)
-shape = ExtResource("5_d53ox")
-
-[node name="ColorWant" type="Sprite2D" parent="Area2D"]
+[node name="ColorWant" type="Sprite2D" parent="."]
 texture = ExtResource("3_jddb8")

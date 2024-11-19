@@ -1,45 +1,74 @@
-[gd_scene load_steps=7 format=3 uid="uid://t4v2slvq5umd"]
+[gd_scene load_steps=11 format=3 uid="uid://t4v2slvq5umd"]
 
+[ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_dl2hg"]
+[ext_resource type="Texture2D" uid="uid://c2lgf62q1dwd5" path="res://art/objects/fundo.png" id="1_v4l2i"]
 [ext_resource type="PackedScene" uid="uid://c5eoy6u7byyh1" path="res://scenes/Instaces/MovableWall.tscn" id="2_8yemm"]
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="2_d4syq"]
+[ext_resource type="Texture2D" uid="uid://beyaf0051rdwr" path="res://art/objects/tabuleiro.png" id="2_t5qm2"]
 [ext_resource type="PackedScene" uid="uid://dgv258bo2gwvj" path="res://scenes/Instaces/LightSumer.tscn" id="3_7iwjh"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="3_vgktr"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="5_k1hka"]
 [ext_resource type="PackedScene" uid="uid://3173gocnsal0" path="res://scenes/Instaces/Filter.tscn" id="6_gvujc"]
 
-[node name="Node2D" type="Camera2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_fjtpf"]
+font_size = 266
+
+[node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals", "winMessage")]
+anchor_mode = 0
+script = ExtResource("1_dl2hg")
+goals = [NodePath("LightReceiver")]
+winMessage = NodePath("Label")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("1_v4l2i")
+centered = false
+
+[node name="Tabuleiro" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("2_t5qm2")
+centered = false
 
 [node name="LightSource3" parent="." instance=ExtResource("2_d4syq")]
-position = Vector2(0, -384)
+position = Vector2(832, 128)
 
 [node name="MovableWall" parent="." instance=ExtResource("2_8yemm")]
-position = Vector2(-320, -192)
-
-[node name="LightSource" parent="." instance=ExtResource("3_7iwjh")]
+position = Vector2(640, 320)
 
 [node name="LightSource2" parent="." instance=ExtResource("2_d4syq")]
-modulate = Color(0, 1, 0, 1)
-position = Vector2(-512, 384)
+position = Vector2(384, 832)
 rotation = 3.14159
+lightColor = Color(0, 1, 0, 1)
 
 [node name="Mirror" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(-512, 0)
+position = Vector2(384, 512)
 
 [node name="LightSource4" parent="." instance=ExtResource("2_d4syq")]
-modulate = Color(0, 0, 1, 1)
-position = Vector2(512, -256)
+position = Vector2(1536, 256)
 rotation = 1.5708
+lightColor = Color(0, 0, 1, 1)
 
 [node name="Mirror2" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(256, -256)
+position = Vector2(1152, 256)
 
 [node name="Mirror3" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(256, 0)
+position = Vector2(1152, 512)
+
+[node name="LightSummer" parent="." instance=ExtResource("3_7iwjh")]
+position = Vector2(832, 512)
 
 [node name="LightReceiver" parent="." instance=ExtResource("5_k1hka")]
-position = Vector2(0, 256)
+position = Vector2(832, 832)
 rotation = 3.14159
 
 [node name="Filter" parent="." instance=ExtResource("6_gvujc")]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(0, -192)
+position = Vector2(832, 320)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_top = 384.0
+offset_right = 1918.0
+offset_bottom = 747.0
+text = "GANHOU!!!!!!!!!!"
+label_settings = SubResource("LabelSettings_fjtpf")

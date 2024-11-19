@@ -3,12 +3,13 @@ class_name LightSource;
 
 var raycast: RayCast2D;
 var line: Line2D;
+@export var lightColor := Color.WHITE;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	raycast = get_child(2) as RayCast2D;
-	line = get_child(3) as Line2D;
-	line.default_color = modulate;
+	line = $Light;
+	line.default_color = lightColor;
 
 func light_beam() -> void:
 	line.add_point(raycast.position, 0);
@@ -25,8 +26,8 @@ func light_beam() -> void:
 				line.add_point(to_local(hit.position));
 				hit.receiver_color(line.default_color);
 			elif hit is LightReceiver:
-				line.add_point(to_local(hit.get_parent().position));
-				hit.receive_light(line.default_color);
+				line.add_point(to_local(hit.position));
+				hit.receive_light(ray.get_parent().position, line.default_color);
 			elif hit is Filter:
 				line.add_point(to_local(hit.position));
 				hit.filter_light(ray.get_parent().position, line.default_color);
