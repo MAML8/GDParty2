@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="GDParty2"
+config/name="Reflexus Lumnus"
+config/version="1.0"
 run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://art/icon.svg"
+config/icon="res://art/objects/lupa 2.png"
 
 [autoload]
 
