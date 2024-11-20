@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ryqstr3tbo6r"]
+[gd_scene load_steps=4 format=3 uid="uid://ryqstr3tbo6r"]
 
 [ext_resource type="Script" path="res://scripts/Main/MainMenu.gd" id="1_erqji"]
+[ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="2_rxq3r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_18eu6"]
 font_size = 128
@@ -75,3 +76,10 @@ offset_bottom = 315.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Fechar"
+
+[node name="Fundo" type="Sprite2D" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
+z_index = -10
+scale = Vector2(3, 3.027)
+texture = ExtResource("2_rxq3r")
+centered = false

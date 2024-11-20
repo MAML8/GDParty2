@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bda6mcxy1mjdf"]
+[gd_scene load_steps=6 format=3 uid="uid://bda6mcxy1mjdf"]
 
 [ext_resource type="Script" path="res://scripts/Main/LevelSelect.gd" id="1_l2ikj"]
 [ext_resource type="Script" path="res://scripts/Main/LevelSelectButton.gd" id="2_2pbd2"]
 [ext_resource type="Script" path="res://scenes/voltar.gd" id="3_js4t6"]
+[ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="4_7r2em"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a3qoc"]
 font_size = 128
@@ -157,3 +158,10 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Voltar para o Menu"
 script = ExtResource("3_js4t6")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
+z_index = -10
+scale = Vector2(3, 3.027)
+texture = ExtResource("4_7r2em")
+centered = false
