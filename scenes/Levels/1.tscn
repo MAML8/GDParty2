@@ -22,32 +22,51 @@ texture = ExtResource("2_ncsny")
 centered = false
 
 [node name="Tabuleiro" type="Sprite2D" parent="."]
+modulate = Color(1, 0.897741, 0.512024, 1)
 z_index = -5
 texture = ExtResource("3_n7rcd")
 centered = false
 
 [node name="Pilastra" type="Sprite2D" parent="."]
-position = Vector2(-1.00001, 449)
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1.00001, 754.585)
 rotation = -0.718448
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_m20lk")
 
 [node name="Pilastra2" type="Sprite2D" parent="."]
-position = Vector2(1918, 449)
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 754.585)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_m20lk")
+
+[node name="Pilastra3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1, 133)
+rotation = -0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_m20lk")
+
+[node name="Pilastra4" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 133)
 rotation = 0.719076
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_m20lk")
 
 [node name="LightSource" parent="." instance=ExtResource("5_qdai8")]
-position = Vector2(896, 173)
+position = Vector2(893, 173)
 
 [node name="Mirror" parent="." instance=ExtResource("6_7b03v")]
-position = Vector2(896, 587)
+position = Vector2(893, 584)
 flipped = true
 
+[node name="Mirror2" parent="." instance=ExtResource("6_7b03v")]
+position = Vector2(1030, 584)
+
 [node name="LightReceiver" parent="." instance=ExtResource("7_hxscm")]
-position = Vector2(1310, 587)
-rotation = 1.5708
+position = Vector2(1030, 174)
 
 [node name="Wall" parent="." instance=ExtResource("8_305v5")]
 position = Vector2(620, 173)

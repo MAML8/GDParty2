@@ -2,8 +2,8 @@
 
 [ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/help resources/1x1square.tres" id="1_7y5ma"]
 [ext_resource type="Script" path="res://scripts/Objects/LightReceiver.gd" id="1_ebt1n"]
-[ext_resource type="Texture2D" uid="uid://b1a4y4bxlfnim" path="res://art/placeholders/LightReceiver.png" id="2_tbanl"]
-[ext_resource type="Texture2D" uid="uid://blae5m6u8v6kw" path="res://art/placeholders/LightReceiverColorWant.png" id="3_jddb8"]
+[ext_resource type="Texture2D" uid="uid://c2bi23xuc8vfn" path="res://art/objects/pedestal.png" id="3_f1gph"]
+[ext_resource type="Texture2D" uid="uid://dlpaw8uf0810f" path="res://art/objects/prisma.png" id="4_funww"]
 
 [node name="LightReceiver" type="Area2D"]
 script = ExtResource("1_ebt1n")
@@ -12,7 +12,17 @@ script = ExtResource("1_ebt1n")
 shape = ExtResource("1_7y5ma")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_tbanl")
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_f1gph")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.851769, 0.851769, 0.851769, 1)
+z_as_relative = false
+position = Vector2(0, -8)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("3_f1gph")
 
 [node name="ColorWant" type="Sprite2D" parent="."]
-texture = ExtResource("3_jddb8")
+position = Vector2(0, -15)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_funww")

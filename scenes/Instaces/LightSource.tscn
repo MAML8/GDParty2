@@ -1,13 +1,42 @@
-[gd_scene load_steps=9 format=3 uid="uid://dg3jn5y1hk6sn"]
+[gd_scene load_steps=15 format=3 uid="uid://dg3jn5y1hk6sn"]
 
 [ext_resource type="Script" path="res://scripts/Objects/LightSource.gd" id="1_huiui"]
 [ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/help resources/1x1square.tres" id="1_u7vgn"]
 [ext_resource type="Texture2D" uid="uid://6s81fsnu46hb" path="res://art/objects/pedestal cropped.png" id="3_gxn35"]
+[ext_resource type="Texture2D" uid="uid://dquq01d305dly" path="res://art/lights/efeitos da luz do sol.png" id="4_4jirt"]
 [ext_resource type="PackedScene" uid="uid://duyrrtf5yo5o8" path="res://scenes/Instaces/Light.tscn" id="4_x50fj"]
 [ext_resource type="Texture2D" uid="uid://c4mn8q28bkpyq" path="res://art/objects/lupa 2.png" id="5_7w5b2"]
 [ext_resource type="Texture2D" uid="uid://ygghdphblyba" path="res://art/lights/ponto de luz (lupa).png" id="6_2u5ue"]
 [ext_resource type="Texture2D" uid="uid://ci8p28fdrftf7" path="res://art/lights/luz do sol.png" id="7_1427q"]
 [ext_resource type="Script" path="res://scripts/Objects/set_global_transform.gd" id="8_rvdso"]
+
+[sub_resource type="Curve" id="Curve_ywbt8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.497537, 1), 0.0, 0.0, 0, 0, Vector2(0.985222, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_5gtbv"]
+curve = SubResource("Curve_ywbt8")
+
+[sub_resource type="Curve" id="Curve_o65kf"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8ikwe"]
+curve = SubResource("Curve_o65kf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0bevt"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 0.01
+angle_min = 1.07288e-05
+angle_max = 180.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 10.0
+radial_accel_max = 10.0
+scale_min = 0.1
+scale_max = 0.14
+alpha_curve = SubResource("CurveTexture_5gtbv")
+emission_curve = SubResource("CurveTexture_8ikwe")
 
 [node name="LightSource" type="Area2D"]
 script = ExtResource("1_huiui")
@@ -20,6 +49,13 @@ shape = ExtResource("1_u7vgn")
 show_behind_parent = true
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("3_gxn35")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D"]
+position = Vector2(-1, -3)
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_0bevt")
+texture = ExtResource("4_4jirt")
+lifetime = 3.0
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(0, 2050)
