@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://c32g1v43e46qb"]
+[gd_scene load_steps=12 format=3 uid="uid://c32g1v43e46qb"]
 
 [ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_bt2t3"]
 [ext_resource type="Texture2D" uid="uid://c2lgf62q1dwd5" path="res://art/objects/fundo.png" id="2_rpomu"]
 [ext_resource type="Texture2D" uid="uid://bpie0r0x23u70" path="res://art/objects/tabuleiro fixed.png" id="3_r0kkv"]
 [ext_resource type="Texture2D" uid="uid://bdwurcasw5m4f" path="res://art/objects/pilastra.png" id="4_epa87"]
+[ext_resource type="PackedScene" uid="uid://dmdiqdkhnf82t" path="res://scenes/Instaces/wall(g).tscn" id="4_mg36w"]
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_g4t2p"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="6_p4xju"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="7_ykwsx"]
-[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall.tscn" id="8_asumj"]
+[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall(S).tscn" id="8_asumj"]
 [ext_resource type="PackedScene" uid="uid://3173gocnsal0" path="res://scenes/Instaces/Filter.tscn" id="9_wrlpx"]
 [ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="10_tqtbc"]
 
@@ -22,18 +23,35 @@ texture = ExtResource("2_rpomu")
 centered = false
 
 [node name="Tabuleiro" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
 z_index = -5
 texture = ExtResource("3_r0kkv")
 centered = false
 
-[node name="Pilastra" type="Sprite2D" parent="."]
-position = Vector2(-1.00001, 449)
+[node name="Pilastra1" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1.00001, 754.585)
 rotation = -0.718448
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_epa87")
 
 [node name="Pilastra2" type="Sprite2D" parent="."]
-position = Vector2(1918, 449)
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 754.585)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_epa87")
+
+[node name="Pilastra3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1, 133)
+rotation = -0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_epa87")
+
+[node name="Pilastra4" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 133)
 rotation = 0.719076
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_epa87")
@@ -61,6 +79,9 @@ position = Vector2(1310, 449)
 
 [node name="Wall" parent="." instance=ExtResource("8_asumj")]
 position = Vector2(1172, 311)
+
+[node name="Wall(G)" parent="." instance=ExtResource("4_mg36w")]
+position = Vector2(616, 850)
 
 [node name="Filter" parent="." instance=ExtResource("9_wrlpx")]
 position = Vector2(1172, 173)

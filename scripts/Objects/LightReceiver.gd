@@ -15,7 +15,7 @@ func receive_light(from: Vector2, color: Color) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	get_child(1).modulate = Color.WHITE if !isReceiveing else Color.GREEN;
+	get_child(3).modulate = Color.WHITE if !isReceiveing else Color.GREEN;
 	if isReceiveing && !countinouslyReceiveing:
 		goal.emit(true);
 	elif !isReceiveing && countinouslyReceiveing:

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bdwurcasw5m4f" path="res://art/objects/pilastra.png" id="4_2rlxd"]
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_r6bdh"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="6_pocrx"]
-[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall.tscn" id="7_22tda"]
+[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall(S).tscn" id="7_22tda"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="8_7mau3"]
 [ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="9_x266n"]
 
@@ -22,18 +22,35 @@ texture = ExtResource("2_enpje")
 centered = false
 
 [node name="Tabuleiro" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
 z_index = -5
 texture = ExtResource("3_85oe2")
 centered = false
 
-[node name="Pilastra" type="Sprite2D" parent="."]
-position = Vector2(-1.00001, 449)
+[node name="Pilastra1" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1.00001, 754.585)
 rotation = -0.718448
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_2rlxd")
 
 [node name="Pilastra2" type="Sprite2D" parent="."]
-position = Vector2(1918, 449)
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 754.585)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_2rlxd")
+
+[node name="Pilastra3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1, 133)
+rotation = -0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_2rlxd")
+
+[node name="Pilastra4" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 133)
 rotation = 0.719076
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_2rlxd")

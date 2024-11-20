@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmdiqdkhnf82t"]
+
+[ext_resource type="Texture2D" uid="uid://rlm16hfdy2qt" path="res://art/objects/Gato.png" id="1_g4b5w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y8slb"]
+radius = 23.0
+height = 120.0
+
+[node name="Wall(G)" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_y8slb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("1_g4b5w")
+offset = Vector2(505.285, 0)
