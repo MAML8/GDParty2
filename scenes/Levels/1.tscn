@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://4hcxd5324abw"]
+[gd_scene load_steps=10 format=3 uid="uid://4hcxd5324abw"]
 
 [ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_3y0t1"]
 [ext_resource type="Texture2D" uid="uid://c2lgf62q1dwd5" path="res://art/objects/fundo.png" id="2_ncsny"]
@@ -7,8 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_qdai8"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="6_7b03v"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="7_hxscm"]
-[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall(S).tscn" id="8_305v5"]
-[ext_resource type="PackedScene" uid="uid://g0f15plr4asn" path="res://scenes/Instaces/wall(p).tscn" id="9_jpfu0"]
+[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall.tscn" id="8_305v5"]
 [ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="9_kbi75"]
 
 [node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
@@ -72,37 +71,37 @@ position = Vector2(1030, 174)
 [node name="Wall" parent="." instance=ExtResource("8_305v5")]
 position = Vector2(620, 173)
 
+[node name="Wall2" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(758, 173)
+
+[node name="Wall3" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(620, 311)
+
+[node name="Wall4" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(1172, 173)
+
 [node name="Wall5" parent="." instance=ExtResource("8_305v5")]
 position = Vector2(1310, 173)
+
+[node name="Wall6" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(1310, 311)
+
+[node name="Wall7" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(620, 725)
 
 [node name="Wall8" parent="." instance=ExtResource("8_305v5")]
 position = Vector2(620, 863)
 
+[node name="Wall9" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(758, 863)
+
+[node name="Wall10" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(1310, 725)
+
 [node name="Wall11" parent="." instance=ExtResource("8_305v5")]
 position = Vector2(1310, 863)
 
-[node name="Wall(P)" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(620, 712)
-
-[node name="Wall(P)2" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(755, 854)
-
-[node name="Wall(P)3" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(1171, 854)
-
-[node name="Wall(P)4" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(1310, 712)
-
-[node name="Wall(P)5" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(1310, 299)
-
-[node name="Wall(P)6" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(1171, 161)
-
-[node name="Wall(P)7" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(757, 160)
-
-[node name="Wall(P)8" parent="." instance=ExtResource("9_jpfu0")]
-position = Vector2(620, 300)
+[node name="Wall12" parent="." instance=ExtResource("8_305v5")]
+position = Vector2(1172, 863)
 
 [node name="WinMenu" parent="." instance=ExtResource("9_kbi75")]
