@@ -12,7 +12,8 @@ func _ready() -> void:
 	line.default_color = lightColor;
 
 func light_beam() -> void:
-	line.add_point(raycast.position, 0);
+	var vec: Vector2 = Vector2(raycast.position.x, -25);
+	line.add_point(vec, 0);
 	var ray: RayCast2D = raycast;
 	var oldray: RayCast2D = null;
 	while ray!=oldray:
