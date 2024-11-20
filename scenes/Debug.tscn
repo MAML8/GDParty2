@@ -13,11 +13,10 @@
 [sub_resource type="LabelSettings" id="LabelSettings_fjtpf"]
 font_size = 266
 
-[node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals", "winMessage")]
+[node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
 anchor_mode = 0
 script = ExtResource("1_dl2hg")
 goals = [NodePath("LightReceiver")]
-winMessage = NodePath("Label")
 
 [node name="Fundo" type="Sprite2D" parent="."]
 z_index = -10
@@ -30,40 +29,40 @@ texture = ExtResource("2_t5qm2")
 centered = false
 
 [node name="LightSource3" parent="." instance=ExtResource("2_d4syq")]
-position = Vector2(832, 128)
+position = Vector2(768, 320)
 
 [node name="MovableWall" parent="." instance=ExtResource("2_8yemm")]
-position = Vector2(640, 320)
+position = Vector2(640, 448)
 
 [node name="LightSource2" parent="." instance=ExtResource("2_d4syq")]
-position = Vector2(384, 832)
+position = Vector2(640, 832)
 rotation = 3.14159
 lightColor = Color(0, 1, 0, 1)
 
 [node name="Mirror" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(384, 512)
+position = Vector2(640, 704)
 
 [node name="LightSource4" parent="." instance=ExtResource("2_d4syq")]
-position = Vector2(1536, 256)
+position = Vector2(1280, 448)
 rotation = 1.5708
 lightColor = Color(0, 0, 1, 1)
 
 [node name="Mirror2" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(1152, 256)
+position = Vector2(1024, 448)
 
 [node name="Mirror3" parent="." instance=ExtResource("3_vgktr")]
-position = Vector2(1152, 512)
+position = Vector2(1024, 704)
 
 [node name="LightSummer" parent="." instance=ExtResource("3_7iwjh")]
-position = Vector2(832, 512)
+position = Vector2(768, 704)
 
 [node name="LightReceiver" parent="." instance=ExtResource("5_k1hka")]
-position = Vector2(832, 832)
+position = Vector2(768, 832)
 rotation = 3.14159
 
 [node name="Filter" parent="." instance=ExtResource("6_gvujc")]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(832, 320)
+position = Vector2(768, 448)
 
 [node name="Label" type="Label" parent="."]
 visible = false
