@@ -1,12 +1,13 @@
 extends LightSource;
 class_name Filter;
 
-@export var filteringColor := Color.BLUE;
+@export var filteringColor := Color.RED;
 var isReceiveing := false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	line = $Light;
+	line = get_child(6) as Line2D;
+	get_child(1).modulate = filteringColor;
 	filteringColor = Color(1-filteringColor.r, 1-filteringColor.g, 1-filteringColor.b);
 	
 
