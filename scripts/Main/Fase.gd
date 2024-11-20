@@ -1,7 +1,7 @@
 extends Node
 
 @export var goals: Array[LightReceiver];
-@export var LevelId: int;
+@export var NextLevel := -1;
 var curGoals := 0;
 
 # Called when the node enters the scene tree for the first time.
@@ -20,7 +20,11 @@ func win() -> void:
 	$WinMenu.visible = true;
 
 func nextLevel() -> void:
-	get_tree().change_scene_to_file("res://scenes/Level/"+str(LevelId+1)+".tsn");
+	if NextLevel >= 0:
+		SaveGame.save(NextLevel);
+		get_tree().change_scene_to_file("res://scenes/Level/"+str(NextLevel)+".tsn");
+	else:
+		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn");
 
 func toMainMenu() -> void:
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn");
