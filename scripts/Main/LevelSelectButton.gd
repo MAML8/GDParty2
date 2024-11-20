@@ -8,4 +8,4 @@ func set_level(a: int) -> void:
 	text = str(a);
 
 func _pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Level/" + str(Level) + ".tscn");
+	get_tree().change_scene_to_file("res://scenes/Levels/" + str(Level) + ".tscn");

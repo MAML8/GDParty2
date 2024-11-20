@@ -21,8 +21,8 @@ func win() -> void:
 
 func nextLevel() -> void:
 	if NextLevel >= 0:
-		SaveGame.save(NextLevel);
-		get_tree().change_scene_to_file("res://scenes/Level/"+str(NextLevel)+".tsn");
+		SaveGame.save_game(NextLevel);
+		get_tree().change_scene_to_file("res://scenes/Levels/"+str(NextLevel)+".tscn");
 	else:
 		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn");
 

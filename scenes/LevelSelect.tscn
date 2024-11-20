@@ -1,4 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bda6mcxy1mjdf"]
+[gd_scene load_steps=5 format=3 uid="uid://bda6mcxy1mjdf"]
+
+[ext_resource type="Script" path="res://scripts/Main/LevelSelect.gd" id="1_l2ikj"]
+[ext_resource type="Script" path="res://scripts/Main/LevelSelectButton.gd" id="2_2pbd2"]
+[ext_resource type="Script" path="res://scenes/voltar.gd" id="3_js4t6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a3qoc"]
 font_size = 128
@@ -25,3 +29,131 @@ text = "Level Select"
 label_settings = SubResource("LabelSettings_a3qoc")
 
 [node name="Buttons" type="Node" parent="."]
+script = ExtResource("1_l2ikj")
+
+[node name="1" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -92.0
+offset_right = -176.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "1"
+script = ExtResource("2_2pbd2")
+
+[node name="2" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -92.0
+offset_right = -48.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2"
+script = ExtResource("2_2pbd2")
+
+[node name="3" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -92.0
+offset_right = 80.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "3"
+script = ExtResource("2_2pbd2")
+
+[node name="4" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -92.0
+offset_right = 208.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "4"
+script = ExtResource("2_2pbd2")
+
+[node name="5" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = 36.0
+offset_right = -112.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+script = ExtResource("2_2pbd2")
+
+[node name="6" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 36.0
+offset_right = 16.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "6"
+script = ExtResource("2_2pbd2")
+
+[node name="7" type="Button" parent="Buttons"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = 36.0
+offset_right = 144.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "7"
+script = ExtResource("2_2pbd2")
+
+[node name="ToMainMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -318.0
+offset_right = 93.0
+offset_bottom = -238.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Voltar para o Menu"
+script = ExtResource("3_js4t6")

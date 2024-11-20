@@ -9,9 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="3_vgktr"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="5_k1hka"]
 [ext_resource type="PackedScene" uid="uid://3173gocnsal0" path="res://scenes/Instaces/Filter.tscn" id="6_gvujc"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vic0e"]
-font_size = 266
+[ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="10_j48xg"]
 
 [node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
 anchor_mode = 0
@@ -64,57 +62,4 @@ rotation = 3.14159
 modulate = Color(1, 0, 0, 1)
 position = Vector2(896, 311)
 
-[node name="WinMenu" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 1920.0
-offset_bottom = 1088.0
-
-[node name="Label" type="Label" parent="WinMenu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -960.0
-offset_top = -416.0
-offset_right = 958.0
-offset_bottom = -53.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "GANHOU!!!!!!!!!!"
-label_settings = SubResource("LabelSettings_vic0e")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="NextLevelButton" type="Button" parent="WinMenu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 128.0
-offset_top = 160.0
-offset_right = 268.0
-offset_bottom = 210.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Próxima Fase"
-
-[node name="MainMenuButton" type="Button" parent="WinMenu"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = 160.0
-offset_right = -116.0
-offset_bottom = 210.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Menu principal"
+[node name="WinMenu" parent="." instance=ExtResource("10_j48xg")]

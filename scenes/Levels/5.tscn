@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://du08kf0dr0b5d"]
+
+[ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_j42en"]
+[ext_resource type="Texture2D" uid="uid://c2lgf62q1dwd5" path="res://art/objects/fundo.png" id="2_04ct5"]
+[ext_resource type="Texture2D" uid="uid://bpie0r0x23u70" path="res://art/objects/tabuleiro fixed.png" id="3_yhogq"]
+[ext_resource type="Texture2D" uid="uid://bdwurcasw5m4f" path="res://art/objects/pilastra.png" id="4_gjtyf"]
+[ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_qj8rn"]
+[ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="6_ils0g"]
+[ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="7_3pjfo"]
+[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall.tscn" id="8_vc1sd"]
+[ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="9_oh3y2"]
+
+[node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
+anchor_mode = 0
+script = ExtResource("1_j42en")
+goals = [NodePath("LightReceiver"), NodePath("LightReceiver2")]
+NextLevel = 6
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("2_04ct5")
+centered = false
+
+[node name="Tabuleiro" type="Sprite2D" parent="."]
+z_index = -5
+texture = ExtResource("3_yhogq")
+centered = false
+
+[node name="Pilastra" type="Sprite2D" parent="."]
+position = Vector2(-1.00001, 449)
+rotation = -0.718448
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_gjtyf")
+
+[node name="Pilastra2" type="Sprite2D" parent="."]
+position = Vector2(1918, 449)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_gjtyf")
+
+[node name="LightSource" parent="." instance=ExtResource("5_qj8rn")]
+position = Vector2(620, 449)
+rotation = -1.5708
+
+[node name="LightReceiver" parent="." instance=ExtResource("6_ils0g")]
+position = Vector2(620, 587)
+rotation = -1.5708
+
+[node name="LightSource2" parent="." instance=ExtResource("5_qj8rn")]
+position = Vector2(1310, 587)
+rotation = 1.5708
+
+[node name="LightReceiver2" parent="." instance=ExtResource("6_ils0g")]
+position = Vector2(1310, 449)
+rotation = 1.5708
+
+[node name="Mirror" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(758, 449)
+
+[node name="Mirror2" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(1172, 587)
+
+[node name="Mirror3" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(896, 587)
+
+[node name="Mirror4" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(1034, 449)
+
+[node name="Mirror5" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(758, 173)
+
+[node name="Mirror6" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(1034, 173)
+
+[node name="Mirror7" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(1172, 863)
+
+[node name="Mirror8" parent="." instance=ExtResource("7_3pjfo")]
+position = Vector2(896, 863)
+flipped = true
+
+[node name="Wall" parent="." instance=ExtResource("8_vc1sd")]
+position = Vector2(896, 449)
+
+[node name="Wall2" parent="." instance=ExtResource("8_vc1sd")]
+position = Vector2(896, 311)
+
+[node name="Wall3" parent="." instance=ExtResource("8_vc1sd")]
+position = Vector2(1034, 587)
+
+[node name="Wall4" parent="." instance=ExtResource("8_vc1sd")]
+position = Vector2(1034, 725)
+
+[node name="WinMenu" parent="." instance=ExtResource("9_oh3y2")]

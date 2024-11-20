@@ -1,14 +1,14 @@
 extends Area2D;
 class_name LightReceiver;
 
-var want: Color;
+@export var want := Color.WHITE;
 var isReceiveing := false;
 var countinouslyReceiveing := false;
 signal goal;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	want = get_child(2).modulate;
+	get_child(2).modulate = want;
 
 func receive_light(from: Vector2, color: Color) -> void:
 	isReceiveing = color == want && to_local(from).normalized().round() == Vector2.DOWN;

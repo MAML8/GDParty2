@@ -4,6 +4,7 @@ class_name LightSource;
 var raycast: RayCast2D;
 var line: Line2D;
 @export var lightColor := Color.WHITE;
+@export var lightStartOffset: Vector2;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,7 +13,7 @@ func _ready() -> void:
 	line.default_color = lightColor;
 
 func light_beam() -> void:
-	var vec: Vector2 = Vector2(raycast.position.x, -25);
+	var vec: Vector2 = Vector2(raycast.position.x, 0) + lightStartOffset;
 	line.add_point(vec, 0);
 	var ray: RayCast2D = raycast;
 	var oldray: RayCast2D = null;

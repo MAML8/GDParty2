@@ -1,7 +1,7 @@
 extends Area2D;
 class_name Mirror;
 
-var flipped: bool;
+@export var flipped: bool;
 const dictDir = {
 	Vector2.UP: Vector2.LEFT,
 	Vector2.RIGHT: Vector2.DOWN,
@@ -11,7 +11,7 @@ const dictDir = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_flip(rotation_degrees != 0);
+	set_flip(flipped);
 
 func get_ray(dir: Vector2) -> RayCast2D:
 	match dir:
@@ -32,7 +32,14 @@ func get_reflected_direction(from: Vector2) -> RayCast2D:
 func set_flip(flip: bool) -> void:
 	flipped = flip;
 	$Espelho.flip_h = flipped;
+	$Silueta.flip_h = flipped;
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton && event.is_pressed():
 		set_flip(!flipped);
+
+func _mouse_enter() -> void:
+	$Silueta.visible = true;
+
+func _mouse_exit() -> void:
+	$Silueta.visible = false;
