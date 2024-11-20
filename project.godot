@@ -17,7 +17,7 @@ config/icon="res://art/icon.svg"
 
 [autoload]
 
-AudioStreamPlayer2d="*res://scenes/audio_stream_player_2d.tscn"
+MainMusic="*res://scenes/main_music.tscn"
 
 [display]
 

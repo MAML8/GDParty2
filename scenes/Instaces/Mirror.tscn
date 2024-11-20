@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcxm5b4o3y36c"]
+[gd_scene load_steps=7 format=3 uid="uid://dcxm5b4o3y36c"]
 
 [ext_resource type="Script" path="res://scripts/Objects/Mirror.gd" id="1_wcy11"]
 [ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/help resources/1x1square.tres" id="2_0a6gi"]
 [ext_resource type="Texture2D" uid="uid://clglkri8qm3k5" path="res://art/objects/espelho frente.png" id="3_s14sg"]
 [ext_resource type="Texture2D" uid="uid://6s81fsnu46hb" path="res://art/objects/pedestal cropped.png" id="4_iqosu"]
 [ext_resource type="Texture2D" uid="uid://0bw222hrajmk" path="res://art/objects/silueta.png" id="4_u131w"]
+[ext_resource type="AudioStream" uid="uid://d3ug5vkbaywln" path="res://music/pop.mp3" id="6_rq5cl"]
 
 [node name="Mirror" type="Area2D"]
 script = ExtResource("1_wcy11")
@@ -43,3 +44,6 @@ texture = ExtResource("4_u131w")
 show_behind_parent = true
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("3_s14sg")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_rq5cl")

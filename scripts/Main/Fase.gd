@@ -18,8 +18,11 @@ func changeCompletion(good: bool) -> void:
 
 func win() -> void:
 	$WinMenu.visible = true;
+	$WinMenu/AudioStreamPlayer2D.play();
+	MainMusic.stop();
 
 func nextLevel() -> void:
+	MainMusic.play();
 	if NextLevel >= 0:
 		SaveGame.save_game(NextLevel);
 		get_tree().change_scene_to_file("res://scenes/Levels/"+str(NextLevel)+".tscn");
@@ -27,6 +30,7 @@ func nextLevel() -> void:
 		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn");
 
 func toMainMenu() -> void:
+	MainMusic.play();
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn");
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
