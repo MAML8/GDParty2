@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://4hcxd5324abw"]
 
 [ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_3y0t1"]
-[ext_resource type="Texture2D" uid="uid://c2lgf62q1dwd5" path="res://art/objects/fundo.png" id="2_ncsny"]
+[ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="2_hjbur"]
 [ext_resource type="Texture2D" uid="uid://bpie0r0x23u70" path="res://art/objects/tabuleiro fixed.png" id="3_n7rcd"]
 [ext_resource type="Texture2D" uid="uid://bdwurcasw5m4f" path="res://art/objects/pilastra.png" id="4_m20lk"]
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_qdai8"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="6_7b03v"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="7_hxscm"]
-[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall(S).tscn" id="8_305v5"]
-[ext_resource type="PackedScene" uid="uid://g0f15plr4asn" path="res://scenes/Instaces/wall(p).tscn" id="9_jpfu0"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/Wall(S).tscn" id="8_305v5"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/wall(p).tscn" id="9_jpfu0"]
 [ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="9_kbi75"]
 
 [node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
@@ -18,8 +18,10 @@ goals = [NodePath("LightReceiver")]
 NextLevel = 2
 
 [node name="Fundo" type="Sprite2D" parent="."]
+modulate = Color(0.439049, 0.439049, 0.439049, 1)
 z_index = -10
-texture = ExtResource("2_ncsny")
+scale = Vector2(3, 3.027)
+texture = ExtResource("2_hjbur")
 centered = false
 
 [node name="Tabuleiro" type="Sprite2D" parent="."]
