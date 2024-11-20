@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://li2qux0lpal3"]
+[gd_scene load_steps=6 format=3 uid="uid://li2qux0lpal3"]
 
 [ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_lfp2l"]
 [ext_resource type="Texture2D" uid="uid://c2lgf62q1dwd5" path="res://art/objects/fundo.png" id="2_hd5jq"]
-[ext_resource type="Texture2D" uid="uid://beyaf0051rdwr" path="res://art/objects/tabuleiro.png" id="3_rqwe4"]
+[ext_resource type="Texture2D" uid="uid://bpie0r0x23u70" path="res://art/objects/tabuleiro fixed.png" id="3_5bedm"]
+[ext_resource type="Texture2D" uid="uid://bdwurcasw5m4f" path="res://art/objects/pilastra.png" id="4_rorbt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fjtpf"]
 font_size = 266
@@ -18,8 +19,20 @@ centered = false
 
 [node name="Tabuleiro" type="Sprite2D" parent="."]
 z_index = -5
-texture = ExtResource("3_rqwe4")
+texture = ExtResource("3_5bedm")
 centered = false
+
+[node name="Pilastra" type="Sprite2D" parent="."]
+position = Vector2(-1.00001, 449)
+rotation = -0.718448
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_rorbt")
+
+[node name="Pilastra2" type="Sprite2D" parent="."]
+position = Vector2(1918, 449)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_rorbt")
 
 [node name="WinMenu" type="Control" parent="."]
 visible = false

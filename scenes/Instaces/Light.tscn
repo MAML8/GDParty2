@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bp2m3hto4aqma" path="res://art/lights/feixe de luz do sol cropped.png" id="1_kevos"]
 
 [node name="Light" type="Line2D"]
+z_index = 1
 width = 25.0
 texture = ExtResource("1_kevos")
 texture_mode = 2
