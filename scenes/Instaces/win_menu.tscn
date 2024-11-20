@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bttsguh5lrpm5"]
 
-[ext_resource type="AudioStream" uid="uid://01efhq1u6m3u" path="res://music/vitoria.mp3" id="1_laxl6"]
+[ext_resource type="AudioStream" uid="uid://01efhq1u6m3u" path="res://music/vitoria.mp3" id="1_lippp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fjtpf"]
 font_size = 266
@@ -61,5 +61,5 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Menu principal"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("1_laxl6")
+[node name="Vitoria" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_lippp")

@@ -16,20 +16,37 @@ texture = ExtResource("2_hd5jq")
 centered = false
 
 [node name="Tabuleiro" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
 z_index = -5
 texture = ExtResource("3_5bedm")
 centered = false
 
-[node name="Pilastra" type="Sprite2D" parent="."]
-position = Vector2(-1.00001, 449)
+[node name="WinMenu" parent="." instance=ExtResource("5_7en4c")]
+
+[node name="Pilastra1" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1.00001, 754.585)
 rotation = -0.718448
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_rorbt")
 
 [node name="Pilastra2" type="Sprite2D" parent="."]
-position = Vector2(1918, 449)
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 754.585)
 rotation = 0.719076
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("4_rorbt")
 
-[node name="WinMenu" parent="." instance=ExtResource("5_7en4c")]
+[node name="Pilastra3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1, 133)
+rotation = -0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_rorbt")
+
+[node name="Pilastra4" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 133)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_rorbt")

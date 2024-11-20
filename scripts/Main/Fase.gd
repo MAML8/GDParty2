@@ -18,13 +18,13 @@ func changeCompletion(good: bool) -> void:
 
 func win() -> void:
 	$WinMenu.visible = true;
-	$WinMenu/AudioStreamPlayer2D.play();
 	MainMusic.stop();
+	$WinMenu.get_child(3).play();
 
 func nextLevel() -> void:
 	MainMusic.play();
 	if NextLevel >= 0:
-		SaveGame.save_game(NextLevel);
+		SaveGame.save_game(NextLevel+1);
 		get_tree().change_scene_to_file("res://scenes/Levels/"+str(NextLevel)+".tscn");
 	else:
 		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn");

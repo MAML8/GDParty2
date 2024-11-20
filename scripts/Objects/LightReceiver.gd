@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 	$ParticulasdeLuz.visible = isReceiveing;
 	if isReceiveing && !countinouslyReceiveing:
 		goal.emit(true);
-		$AudioStreamPlayer2D.play();
+		$Plim.play();
 	elif !isReceiveing && countinouslyReceiveing:
 		goal.emit(false);
 	countinouslyReceiveing = isReceiveing;

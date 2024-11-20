@@ -37,7 +37,7 @@ func set_flip(flip: bool) -> void:
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton && event.is_pressed():
 		set_flip(!flipped);
-		$AudioStreamPlayer2D.play();
+		$Pop.play();
 
 func _mouse_enter() -> void:
 	$Silueta.visible = true;
