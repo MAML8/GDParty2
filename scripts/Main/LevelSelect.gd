@@ -4,6 +4,8 @@ class_name LevelSelect;
 func _ready() -> void:
 	var quantSave := SaveGame.load_game();
 	for i in quantSave:
+		if i>= get_child_count():
+			break;
 		var button := get_child(i) as LevelSelectButton;
 		button.visible = true;
 		button.set_level(i+1);
