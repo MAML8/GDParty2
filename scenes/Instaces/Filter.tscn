@@ -17,7 +17,6 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("3_y220g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
-scale = Vector2(1, 1)
 texture = ExtResource("3_qh7tk")
 
 [node name="Right" type="RayCast2D" parent="."]
@@ -37,3 +36,4 @@ target_position = Vector2(0, -2000)
 collide_with_areas = true
 
 [node name="Light" parent="." instance=ExtResource("4_1uwd8")]
+self_modulate = Color(1, 1, 1, 1)

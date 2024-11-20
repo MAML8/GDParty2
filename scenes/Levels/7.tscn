@@ -45,7 +45,7 @@ rotation = -1.5708
 [node name="LightReceiver" parent="." instance=ExtResource("6_p4xju")]
 position = Vector2(1034, 863)
 rotation = 3.14159
-want = Color(1, 0, 0, 1)
+want = Color(0, 0, 1, 1)
 
 [node name="Mirror" parent="." instance=ExtResource("7_ykwsx")]
 position = Vector2(1034, 449)
