@@ -13,10 +13,24 @@ script = ExtResource("1_7bqnk")
 shape = ExtResource("2_skbn1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.125, 0.125)
 texture = ExtResource("3_y220g")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(-128, -120)
+rotation = -0.445059
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_qh7tk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(120, -128)
+rotation = 0.575959
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_qh7tk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D2"]
+position = Vector2(-20, -160)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_qh7tk")
 
 [node name="Right" type="RayCast2D" parent="."]
@@ -36,4 +50,3 @@ target_position = Vector2(0, -2000)
 collide_with_areas = true
 
 [node name="Light" parent="." instance=ExtResource("4_1uwd8")]
-self_modulate = Color(1, 1, 1, 1)

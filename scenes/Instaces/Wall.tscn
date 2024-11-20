@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://csle76sc8agiq"]
+[gd_scene load_steps=3 format=3 uid="uid://csed2e1id368"]
 
 [ext_resource type="Shape2D" uid="uid://gm5x6spuwkg" path="res://art/help resources/1x1square.tres" id="1_xrpre"]
 [ext_resource type="Texture2D" uid="uid://d2wvnqaxyrymy" path="res://art/placeholders/Wall.png" id="2_io4j4"]
