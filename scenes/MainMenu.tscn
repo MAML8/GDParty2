@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ryqstr3tbo6r"]
+[gd_scene load_steps=8 format=3 uid="uid://ryqstr3tbo6r"]
 
 [ext_resource type="Script" path="res://scripts/Main/MainMenu.gd" id="1_erqji"]
 [ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="2_rxq3r"]
+[ext_resource type="Texture2D" uid="uid://c2bi23xuc8vfn" path="res://art/objects/pedestal.png" id="2_vcsxt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_18eu6"]
 font_size = 128
@@ -9,6 +10,27 @@ outline_size = 20
 outline_color = Color(0.557449, 0.557449, 0, 1)
 shadow_size = 30
 shadow_color = Color(1, 1, 0.207843, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8rdq"]
+texture = ExtResource("2_vcsxt")
+expand_margin_left = 150.0
+expand_margin_top = 25.0
+expand_margin_right = 150.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x7cbm"]
+texture = ExtResource("2_vcsxt")
+expand_margin_left = 150.0
+expand_margin_top = 25.0
+expand_margin_right = 150.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_devi1"]
+texture = ExtResource("2_vcsxt")
+expand_margin_left = 150.0
+expand_margin_top = 25.0
+expand_margin_right = 150.0
+expand_margin_bottom = 25.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -45,7 +67,10 @@ offset_right = 97.0
 offset_bottom = 115.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_r8rdq")
 text = "Iniciar Jogo"
+icon_alignment = 1
+expand_icon = true
 
 [node name="LevelSelectButton" type="Button" parent="."]
 layout_mode = 1
@@ -60,6 +85,7 @@ offset_right = 97.0
 offset_bottom = 215.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_x7cbm")
 text = "Level Select"
 
 [node name="QuitButton" type="Button" parent="."]
@@ -75,6 +101,7 @@ offset_right = 97.0
 offset_bottom = 315.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_devi1")
 text = "Fechar"
 
 [node name="Fundo" type="Sprite2D" parent="."]

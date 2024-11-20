@@ -1,12 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://bda6mcxy1mjdf"]
+[gd_scene load_steps=15 format=3 uid="uid://bda6mcxy1mjdf"]
 
 [ext_resource type="Script" path="res://scripts/Main/LevelSelect.gd" id="1_l2ikj"]
 [ext_resource type="Script" path="res://scripts/Main/LevelSelectButton.gd" id="2_2pbd2"]
 [ext_resource type="Script" path="res://scenes/voltar.gd" id="3_js4t6"]
+[ext_resource type="Texture2D" uid="uid://c2bi23xuc8vfn" path="res://art/objects/pedestal.png" id="3_rn5md"]
 [ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="4_7r2em"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a3qoc"]
 font_size = 128
+outline_size = 20
+outline_color = Color(0.556863, 0.556863, 0, 1)
+shadow_size = 30
+shadow_color = Color(1, 1, 0.207843, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2qx7"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rgqni"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ee21y"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfqq0"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eqn6n"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6m4my"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5nxhf"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 70.0
+expand_margin_top = 25.0
+expand_margin_right = 70.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xeok"]
+texture = ExtResource("3_rn5md")
+expand_margin_left = 125.0
+expand_margin_top = 25.0
+expand_margin_right = 125.0
+expand_margin_bottom = 25.0
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -45,6 +106,7 @@ offset_right = -176.0
 offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_m2qx7")
 text = "1"
 script = ExtResource("2_2pbd2")
 
@@ -61,6 +123,7 @@ offset_right = -48.0
 offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_rgqni")
 text = "2"
 script = ExtResource("2_2pbd2")
 
@@ -76,6 +139,7 @@ offset_right = 80.0
 offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_ee21y")
 text = "3"
 script = ExtResource("2_2pbd2")
 
@@ -92,6 +156,7 @@ offset_right = 208.0
 offset_bottom = -12.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_yfqq0")
 text = "4"
 script = ExtResource("2_2pbd2")
 
@@ -108,6 +173,7 @@ offset_right = -112.0
 offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_eqn6n")
 text = "5"
 script = ExtResource("2_2pbd2")
 
@@ -124,6 +190,7 @@ offset_right = 16.0
 offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_6m4my")
 text = "6"
 script = ExtResource("2_2pbd2")
 
@@ -140,6 +207,7 @@ offset_right = 144.0
 offset_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5nxhf")
 text = "7"
 script = ExtResource("2_2pbd2")
 
@@ -156,6 +224,7 @@ offset_right = 78.5
 offset_bottom = -200.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_7xeok")
 text = "Voltar para o Menu"
 script = ExtResource("3_js4t6")
 

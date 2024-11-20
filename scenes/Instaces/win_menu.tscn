@@ -1,9 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://bttsguh5lrpm5"]
+[gd_scene load_steps=6 format=3 uid="uid://bttsguh5lrpm5"]
 
+[ext_resource type="Texture2D" uid="uid://c2bi23xuc8vfn" path="res://art/objects/pedestal.png" id="1_irdio"]
 [ext_resource type="AudioStream" uid="uid://01efhq1u6m3u" path="res://music/vitoria.mp3" id="1_lippp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fjtpf"]
 font_size = 266
+outline_size = 20
+outline_color = Color(0.556863, 0.556863, 0, 1)
+shadow_size = 30
+shadow_color = Color(1, 1, 0.207843, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rys7o"]
+texture = ExtResource("1_irdio")
+expand_margin_left = 150.0
+expand_margin_top = 25.0
+expand_margin_right = 150.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1vj2x"]
+texture = ExtResource("1_irdio")
+expand_margin_left = 150.0
+expand_margin_top = 25.0
+expand_margin_right = 150.0
+expand_margin_bottom = 25.0
 
 [node name="WinMenu" type="Control"]
 visible = false
@@ -26,7 +45,7 @@ offset_right = 958.0
 offset_bottom = -53.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "GANHOU!!!!!!!!!!"
+text = "Vitória!"
 label_settings = SubResource("LabelSettings_fjtpf")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -44,6 +63,7 @@ offset_right = 268.0
 offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_rys7o")
 text = "Próxima Fase"
 
 [node name="MainMenuButton" type="Button" parent="."]
@@ -59,6 +79,7 @@ offset_right = -116.0
 offset_bottom = 210.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_1vj2x")
 text = "Menu principal"
 
 [node name="Vitoria" type="AudioStreamPlayer2D" parent="."]

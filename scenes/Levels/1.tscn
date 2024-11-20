@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_qdai8"]
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="6_7b03v"]
 [ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="7_hxscm"]
-[ext_resource type="PackedScene" uid="uid://csle76sc8agiq" path="res://scenes/Instaces/Wall(S).tscn" id="8_305v5"]
-[ext_resource type="PackedScene" uid="uid://g0f15plr4asn" path="res://scenes/Instaces/wall(p).tscn" id="9_jpfu0"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/Wall(S).tscn" id="8_305v5"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/wall(p).tscn" id="9_jpfu0"]
 [ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="9_kbi75"]
 
 [node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
