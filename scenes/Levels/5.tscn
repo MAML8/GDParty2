@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://du08kf0dr0b5d"]
+[gd_scene load_steps=11 format=3 uid="uid://du08kf0dr0b5d"]
 
 [ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_j42en"]
 [ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="2_203f7"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="7_3pjfo"]
 [ext_resource type="PackedScene" path="res://scenes/Instaces/Wall(S).tscn" id="8_vc1sd"]
 [ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="9_oh3y2"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/wall(p).tscn" id="10_d7kc6"]
 
 [node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
 anchor_mode = 0
@@ -101,13 +102,13 @@ flipped = true
 [node name="Wall" parent="." instance=ExtResource("8_vc1sd")]
 position = Vector2(896, 449)
 
-[node name="Wall2" parent="." instance=ExtResource("8_vc1sd")]
-position = Vector2(896, 311)
-
-[node name="Wall3" parent="." instance=ExtResource("8_vc1sd")]
-position = Vector2(1034, 587)
-
 [node name="Wall4" parent="." instance=ExtResource("8_vc1sd")]
 position = Vector2(1034, 725)
 
 [node name="WinMenu" parent="." instance=ExtResource("9_oh3y2")]
+
+[node name="Wall(P)" parent="." instance=ExtResource("10_d7kc6")]
+position = Vector2(1034, 576)
+
+[node name="Wall(P)" parent="Wall(P)" instance=ExtResource("10_d7kc6")]
+position = Vector2(-137, -278)
