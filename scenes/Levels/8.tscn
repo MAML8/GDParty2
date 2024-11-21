@@ -1,0 +1,120 @@
+[gd_scene load_steps=13 format=3 uid="uid://cavcsvixjr6vn"]
+
+[ext_resource type="Script" path="res://scripts/Main/Fase.gd" id="1_52xnp"]
+[ext_resource type="Texture2D" uid="uid://ni02e1rnaf55" path="res://art/objects/Sand.png" id="2_nxnuh"]
+[ext_resource type="Texture2D" uid="uid://bpie0r0x23u70" path="res://art/objects/tabuleiro fixed.png" id="3_btn6o"]
+[ext_resource type="Texture2D" uid="uid://bdwurcasw5m4f" path="res://art/objects/pilastra.png" id="4_6601k"]
+[ext_resource type="PackedScene" uid="uid://dg3jn5y1hk6sn" path="res://scenes/Instaces/LightSource.tscn" id="5_1luho"]
+[ext_resource type="PackedScene" uid="uid://dp3s62c8lvka3" path="res://scenes/Instaces/LightReceiver.tscn" id="6_yc6k4"]
+[ext_resource type="PackedScene" uid="uid://dcxm5b4o3y36c" path="res://scenes/Instaces/Mirror.tscn" id="7_3wtv1"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/Wall(S).tscn" id="8_7ux6c"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/wall(g).tscn" id="9_7o0bn"]
+[ext_resource type="PackedScene" uid="uid://3173gocnsal0" path="res://scenes/Instaces/Filter.tscn" id="10_i5h3j"]
+[ext_resource type="PackedScene" path="res://scenes/Instaces/wall(p).tscn" id="10_w0v88"]
+[ext_resource type="PackedScene" uid="uid://bttsguh5lrpm5" path="res://scenes/Instaces/win_menu.tscn" id="11_kmpy2"]
+
+[node name="Node2D" type="Camera2D" node_paths=PackedStringArray("goals")]
+anchor_mode = 0
+script = ExtResource("1_52xnp")
+goals = [NodePath("LightReceiver")]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+modulate = Color(0.439216, 0.439216, 0.439216, 1)
+z_index = -10
+scale = Vector2(3, 3)
+texture = ExtResource("2_nxnuh")
+centered = false
+
+[node name="Tabuleiro" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+z_index = -5
+texture = ExtResource("3_btn6o")
+centered = false
+
+[node name="Pilastra1" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1.00001, 754.585)
+rotation = -0.718448
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6601k")
+
+[node name="Pilastra2" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 754.585)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6601k")
+
+[node name="Pilastra3" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(-1, 133)
+rotation = -0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6601k")
+
+[node name="Pilastra4" type="Sprite2D" parent="."]
+modulate = Color(1, 0.898039, 0.513726, 1)
+position = Vector2(1918, 133)
+rotation = 0.719076
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6601k")
+
+[node name="LightSource2" parent="." instance=ExtResource("5_1luho")]
+position = Vector2(621, 168)
+rotation = -1.5708
+
+[node name="LightReceiver" parent="." instance=ExtResource("6_yc6k4")]
+position = Vector2(617, 584)
+rotation = -1.5708
+want = Color(0, 0, 1, 1)
+
+[node name="Mirror" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(1170, 446)
+flipped = true
+
+[node name="Mirror2" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(1170, 583)
+flipped = true
+
+[node name="Mirror3" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(1170, 305)
+flipped = true
+
+[node name="Mirror4" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(755, 583)
+
+[node name="Mirror5" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(755, 305)
+
+[node name="Mirror6" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(1306, 446)
+
+[node name="Mirror7" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(892, 860)
+
+[node name="Mirror8" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(1306, 860)
+
+[node name="Mirror9" parent="." instance=ExtResource("7_3wtv1")]
+position = Vector2(892, 168)
+flipped = true
+
+[node name="Filter" parent="." instance=ExtResource("10_i5h3j")]
+position = Vector2(892, 720)
+
+[node name="Wall" parent="." instance=ExtResource("8_7ux6c")]
+position = Vector2(754, 722)
+
+[node name="Wall(P)" parent="." instance=ExtResource("10_w0v88")]
+position = Vector2(619, 298)
+
+[node name="Wall(P)2" parent="." instance=ExtResource("10_w0v88")]
+position = Vector2(1307, 163)
+
+[node name="Wall(P)3" parent="." instance=ExtResource("10_w0v88")]
+position = Vector2(1029, 441)
+
+[node name="Wall(G)" parent="." instance=ExtResource("9_7o0bn")]
+position = Vector2(1029, 581)
+
+[node name="WinMenu" parent="." instance=ExtResource("11_kmpy2")]

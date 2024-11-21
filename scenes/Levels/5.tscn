@@ -61,13 +61,13 @@ texture = ExtResource("4_gjtyf")
 position = Vector2(620, 449)
 rotation = -1.5708
 
-[node name="LightReceiver" parent="." instance=ExtResource("6_ils0g")]
-position = Vector2(620, 587)
-rotation = -1.5708
-
 [node name="LightSource2" parent="." instance=ExtResource("5_qj8rn")]
 position = Vector2(1310, 587)
 rotation = 1.5708
+
+[node name="LightReceiver" parent="." instance=ExtResource("6_ils0g")]
+position = Vector2(620, 587)
+rotation = -1.5708
 
 [node name="LightReceiver2" parent="." instance=ExtResource("6_ils0g")]
 position = Vector2(1310, 449)
