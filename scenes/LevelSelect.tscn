@@ -110,6 +110,7 @@ text = "1"
 script = ExtResource("2_2pbd2")
 
 [node name="2" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -126,6 +127,7 @@ text = "2"
 script = ExtResource("2_2pbd2")
 
 [node name="3" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -142,6 +144,7 @@ text = "3"
 script = ExtResource("2_2pbd2")
 
 [node name="4" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -158,6 +161,7 @@ text = "4"
 script = ExtResource("2_2pbd2")
 
 [node name="5" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -174,6 +178,7 @@ text = "5"
 script = ExtResource("2_2pbd2")
 
 [node name="6" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -190,6 +195,7 @@ text = "6"
 script = ExtResource("2_2pbd2")
 
 [node name="7" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -206,6 +212,7 @@ text = "7"
 script = ExtResource("2_2pbd2")
 
 [node name="8" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -222,6 +229,7 @@ text = "8"
 script = ExtResource("2_2pbd2")
 
 [node name="9" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -238,6 +246,7 @@ text = "9"
 script = ExtResource("2_2pbd2")
 
 [node name="10" type="Button" parent="Buttons"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

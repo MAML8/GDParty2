@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Reflexus Lumnus"
-config/version="1.0"
+config/version="1.1"
 run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://art/objects/lupa 2.png"
@@ -36,4 +36,5 @@ project/assembly_name="Teste"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 viewport/hdr_2d=true
